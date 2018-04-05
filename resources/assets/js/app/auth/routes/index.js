@@ -11,5 +11,14 @@ export default [
 			guest: true,
 			needsAuth: false
 		}
+	},
+	{
+		path: '/register',
+		compontent: Register,
+		name: 'register',
+		meta: {
+			guest: true,
+			needsAuth: false
+		}
 	}
 ]
