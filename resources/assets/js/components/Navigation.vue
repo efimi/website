@@ -19,7 +19,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         
-                            <li><a class="nav-link" href="#">Logout</a></li>
+                            <li><router-link :to="{ name: 'login' }">Login</router-link></li>
                             <li><a class="nav-link" href="#">register</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -33,8 +33,7 @@
                                     </a>
 
                                     <form id="logout-form" action="#" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                                     </form>
                                 </div>
                             </li>
                     </ul>
