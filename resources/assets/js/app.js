@@ -1,4 +1,5 @@
-
+//router.index.js not required to wirte down... 
+import router from './router'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -19,5 +20,6 @@ Vue.component('app', require('./components/App.vue'));
 Vue.component('navigation', require('./components/Navigation.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router: router,	
 });
