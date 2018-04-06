@@ -28973,11 +28973,11 @@ var render = function() {
         _c("div", { staticClass: "panel-heading" }, [_vm._v("Login")]),
         _vm._v(" "),
         _c("div", { staticClass: "panel-body" }, [
-          _c("div", { staticClass: "alert alert-danger" }, [
-            _vm._v(
-              "\n\t\t\t\t\tCould not sign in you with those details.\n\t\t\t\t"
-            )
-          ]),
+          _vm.errors.root
+            ? _c("div", { staticClass: "alert alert-danger" }, [
+                _vm._v("\n\t\t\t\t\t" + _vm._s(_vm.errors.root) + "\n\t\t\t\t")
+              ])
+            : _vm._e(),
           _vm._v(" "),
           _c(
             "form",

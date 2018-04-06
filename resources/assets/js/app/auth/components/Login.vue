@@ -6,8 +6,8 @@
 
 				<div class="panel-body">
 
-					<div class="alert alert-danger">
-						Could not sign in you with those details.
+					<div class="alert alert-danger" v-if="errors.root">
+						{{ errors.root }}
 					</div>
 
 					<form action="" class="form-horizontal" role="form" @submit.prevent="submit">
