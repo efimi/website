@@ -8,23 +8,26 @@
 
 				<div class="panel-body">
 					<form action="" class="form-horizontal" role="form" @submit.prevent="submit">
-						<div class="form-group">
+						<div class="form-group" :class="{'has-error': errors.name}">
 							<label class="col-md-4 control-label">Name</label>
 							<div class="col-md-6">
 								<input name="name" type="text" class="form-control" autofocus v-model="name">
 							</div>
+							<span class="help-block" v-if="errors.name">{{ errors.name[0] }}</span>
 						</div>
-						<div class="form-group">
+						<div class="form-group" :class="{'has-error': errors.email}">
 							<label class="col-md-4 control-label">Email address</label>
 							<div class="col-md-6">
 								<input name="email" type="text" class="form-control"  v-model="email">
 							</div>
+							<span class="help-block" v-if="errors.email">{{ errors.email[0] }}</span>
 						</div>
-						<div class="form-group">
+						<div class="form-group" :class="{'has-error': errors.password}">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
 								<input name="password" type="text" class="form-control"  v-model="password">
 							</div>
+							<span class="help-block" v-if="errors.password">{{ errors.password[0] }}</span>
 						</div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
