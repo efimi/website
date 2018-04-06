@@ -52,7 +52,14 @@
 				register: 'auth/register'
 			}),
 			submit () {
-				console.log(this.name)
+				this.register({
+					payload: {
+						name: this.name, 
+						email: this.email, 
+						passowrd: this.password
+
+					},
+				})
 			}
 		}
 	}
