@@ -9,8 +9,15 @@ export const register = ({ dispatch }, { payload, context }) => {
 
 export const login = ({ dispatch }, { payload, context }) => {
 	return axios.post('/api/login', payload).then((response) => {
-		console.log(response)
+		//set token 
+		// fetch user
+
 	}).catch((error) => {
 		context.errors = error.response.data.errors
 	})
+}
+
+export default setToken = ({commit, dispatch}, token) => { 
+	// invoke new methode ind mutations
+	commit('setToken', token)
 }

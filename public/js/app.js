@@ -29706,11 +29706,21 @@ var login = function login(_ref3, _ref4) {
 	    context = _ref4.context;
 
 	return axios.post('/api/login', payload).then(function (response) {
-		console.log(response);
+		//set token 
+		// fetch user
+
 	}).catch(function (error) {
 		context.errors = error.response.data.errors;
 	});
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (setToken = function setToken(_ref5, token) {
+	var commit = _ref5.commit,
+	    dispatch = _ref5.dispatch;
+
+	// invoke new methode ind mutations
+	commit('setToken', token);
+});
 
 /***/ }),
 /* 42 */
