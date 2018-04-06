@@ -14,15 +14,22 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" v-if="!user.authenticated">
+                        <!-- Not Authentication Links -->
+                        
+                           
+                            <li><router-link :to="{ name: 'login' }" class="nav-link">Login</router-link></li>
+                            <li><router-link :to="{ name: 'register'}" class="nav-link"> Register</router-link></li>
+                           
+                    </ul>
+                    <ul class="navbar-nav ml-auto" v-if="user.authenticated">
                         <!-- Authentication Links -->
                         
                             <li><router-link :to="{ name: 'timeline' }" class="nav-link">Timeline</router-link></li>
-                            <li><router-link :to="{ name: 'login' }" class="nav-link">Login</router-link></li>
-                            <li><router-link :to="{ name: 'register'}" class="nav-link"> Register</router-link></li>
+                           
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Reinhold lehnhar <span class="caret"></span>
+                                    {{ user.data.name }}
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,3 +49,17 @@
     </div>
 </template>
 
+
+<script>
+    import { mapGetters } from 'vuex'
+
+    export default {
+        computed: mapGetters({
+            user: 'auth/user', 
+        }),
+        mounted(){
+            console.log(this.user.authenticated);
+            console.log(this.user.data.name);
+        }
+    }
+</script>
