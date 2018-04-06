@@ -36,6 +36,8 @@
 </template>
 
 <script>
+	import { mapActions } from 'vuex'
+
 	export default {
 		data() {
 			return {
@@ -45,6 +47,10 @@
 			}
 		},
 		methods: {
+			// they are namespaced
+			...mapActions({
+				register: 'auth/register'
+			}),
 			submit () {
 				console.log(this.name)
 			}
