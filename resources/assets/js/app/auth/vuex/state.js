@@ -1,9 +1,6 @@
 export default {
 	user:{
-		authenticated: true, 
-		data: {
-			name: 'Roland Lehnhardt'
-
-		}
+		authenticated: false, 
+		data: null,//{name: 'Roland Lehnhardt'}
 	}
 }
