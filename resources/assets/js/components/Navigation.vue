@@ -17,9 +17,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         
-                            <li><router-link :to="{ name: 'timeline' }">Timeline</router-link></li>
-                            <li><router-link :to="{ name: 'login' }">Login</router-link></li>
-                            <li><router-link :to="{ name: 'register'}"> Register</router-link></li>
+                            <li><router-link :to="{ name: 'timeline' }" class="nav-link">Timeline</router-link></li>
+                            <li><router-link :to="{ name: 'login' }" class="nav-link">Login</router-link></li>
+                            <li><router-link :to="{ name: 'register'}" class="nav-link"> Register</router-link></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Reinhold lehnhar <span class="caret"></span>

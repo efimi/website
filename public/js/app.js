@@ -47420,7 +47420,10 @@ var render = function() {
                     [
                       _c(
                         "router-link",
-                        { attrs: { to: { name: "timeline" } } },
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: { name: "timeline" } }
+                        },
                         [_vm._v("Timeline")]
                       )
                     ],
@@ -47430,9 +47433,14 @@ var render = function() {
                   _c(
                     "li",
                     [
-                      _c("router-link", { attrs: { to: { name: "login" } } }, [
-                        _vm._v("Login")
-                      ])
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: { name: "login" } }
+                        },
+                        [_vm._v("Login")]
+                      )
                     ],
                     1
                   ),
@@ -47442,7 +47450,10 @@ var render = function() {
                     [
                       _c(
                         "router-link",
-                        { attrs: { to: { name: "register" } } },
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: { name: "register" } }
+                        },
                         [_vm._v(" Register")]
                       )
                     ],
