@@ -29072,6 +29072,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
 
 
 
@@ -29080,7 +29083,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 		return {
 			name: null,
 			email: null,
-			password: null
+			password: null,
+			errors: []
 		};
 	},
 
@@ -29094,7 +29098,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 					email: this.email,
 					password: this.password
 
-				}
+				},
+				context: this
 			});
 		}
 	})
@@ -29112,7 +29117,7 @@ var render = function() {
     _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
       _c("div", { staticClass: "panel panel-default" }, [
         _c("div", { staticClass: "panel-heading" }, [_vm._v("Register")]),
-        _vm._v(" "),
+        _vm._v("\n\n\t\t\t" + _vm._s(_vm.errors) + "\n\n\t\t\t"),
         _c("div", { staticClass: "panel-body" }, [
           _c(
             "form",
@@ -29514,10 +29519,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // name of action with two obejects
 var register = function register(_ref, _ref2) {
 	var dispatch = _ref.dispatch;
-	var payload = _ref2.payload;
+	var payload = _ref2.payload,
+	    context = _ref2.context;
 
 	return axios.post('/api/register', payload).then(function (response) {
 		console.log(response);
+	}).catch(function (error) {
+		context.errors = error.response.data.errors;
 	});
 };
 

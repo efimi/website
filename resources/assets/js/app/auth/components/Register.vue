@@ -3,6 +3,9 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">Register</div>
+
+				{{ errors }}
+
 				<div class="panel-body">
 					<form action="" class="form-horizontal" role="form" @submit.prevent="submit">
 						<div class="form-group">
@@ -43,7 +46,8 @@
 			return {
 				name: null, 
 				email: null, 
-				password: null
+				password: null,
+				errors: []
 			}
 		},
 		methods: {
@@ -58,7 +62,8 @@
 						email: this.email, 
 						password: this.password
 
-					}, 
+					},
+					context: this
 				})
 			}
 		}
