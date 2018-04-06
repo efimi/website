@@ -29092,7 +29092,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 				payload: {
 					name: this.name,
 					email: this.email,
-					passowrd: this.password
+					password: this.password
 
 				}
 			});
@@ -29516,7 +29516,9 @@ var register = function register(_ref, _ref2) {
 	var dispatch = _ref.dispatch;
 	var payload = _ref2.payload;
 
-	console.log(payload);
+	return axios.post('/api/register', payload).then(function (response) {
+		console.log(response);
+	});
 };
 
 /***/ }),

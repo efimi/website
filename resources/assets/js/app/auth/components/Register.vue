@@ -56,9 +56,9 @@
 					payload: {
 						name: this.name, 
 						email: this.email, 
-						passowrd: this.password
+						password: this.password
 
-					},
+					}, 
 				})
 			}
 		}
