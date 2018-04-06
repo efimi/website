@@ -5,7 +5,7 @@ import {Login, Register } from '../components'
 export default [
 	{
 		path: '/login',
-		compontent: Login,
+		component: Login,
 		name: 'login',
 		meta: {
 			guest: true,
@@ -14,7 +14,7 @@ export default [
 	},
 	{
 		path: '/register',
-		compontent: Register,
+		component: Register,
 		name: 'register',
 		meta: {
 			guest: true,
