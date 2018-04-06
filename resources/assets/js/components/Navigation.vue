@@ -17,6 +17,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         
+                            <li><router-link :to="{ name: 'timeline' }">Timeline</router-link></li>
                             <li><router-link :to="{ name: 'login' }">Login</router-link></li>
                             <li><router-link :to="{ name: 'register'}"> Register</router-link></li>
                             <li class="nav-item dropdown">
